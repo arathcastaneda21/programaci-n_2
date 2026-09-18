@@ -28,7 +28,6 @@ while True:
         emails.append(email)
         direcciones.append(direccion)
         print(f"Contacto {nombre} guardado exitosamente")
-        pass
     elif opcion_elegida == 2:
         nombre = input("Ingrese el nombre a buscar: ")
         if nombre in nombres:
@@ -49,7 +48,6 @@ while True:
                 print(f"Email: {email}")
                 print(f"Direccion: {direccion}")
                 print("="*10)
-            pass
     elif opcion_elegida == 5:
         print("Hasta la vida Baby")
         break
