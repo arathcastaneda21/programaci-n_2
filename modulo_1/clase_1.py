@@ -1,9 +1,12 @@
+
+
+
 nombres = []
 telefonos = []
 emails = []
 direcciones = []
 
-
+contactos = {}
 while True:
     menu = """
 
@@ -40,14 +43,16 @@ while True:
         else:
              print("Contacto no existe")
     elif opcion_elegida == 3:
-        pass
+        nombre = input("Ingrese el contacto a eliminar: ")
+        if nombre in contactos:
+            del contactos[nombre]
+            print(f"Contacto {nombre} eliminado exitosamente")
+        else:
+            print(f"Contacto {nombre} no existe")
     elif opcion_elegida == 4:
-            for nombre,telefono,email,direccion in zip(nombres,telefonos,emails,direcciones):
-                print(f"Nombre: {nombre}")
-                print(f"Telefono: {telefono}")
-                print(f"Email: {email}")
-                print(f"Direccion: {direccion}")
-                print("="*10)
+            for i, key in enumerate(contactos):
+                 print(i+1, "-,key")
+                
     elif opcion_elegida == 5:
         print("Hasta la vida Baby")
         break
